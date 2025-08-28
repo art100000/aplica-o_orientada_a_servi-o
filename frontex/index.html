@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Frase Inspiradora Aleatória</h1>
+        <p id="randomNumber"></p>
+        <p id="quote"></p>
+        <button class="button" onclick="generateInspiration()">Gerar Frase</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "Acredite no seu potencial, mesmo quando ninguém mais acreditar.",
+            "Cada pequeno passo te aproxima do grande objetivo.",
+            "A vida começa onde sua zona de conforto termina.",
+            "Seja a mudança que você deseja ver no mundo.",
+            "Não espere a motivação, crie-a!",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+            "A maior descoberta é saber que você pode ir além.",
+            "O impossível só existe até que alguém decida que é possível.",
+            "Desafios são oportunidades disfarçadas de dificuldades.",
+            "Não tenha medo de começar de novo, é uma chance de construir algo melhor.",
+            "O futuro pertence àqueles que acreditam nos seus sonhos.",
+            "Faça hoje o que seu futuro agradecerá.",
+            "A felicidade não é algo pronto, ela vem de suas ações.",
+            "O caminho para o sucesso é sempre em construção.",
+            "O segredo da vida é acreditar no impossível e correr atrás."
+        ];
+
+        function generateInspiration() {
+            // Gera um número aleatório
+            const randomNumber = Math.floor(Math.random() * 100) + 1; // Número entre 1 e 100
+
+            // Gera uma frase aleatória
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+            // Exibe os resultados no HTML
+            document.getElementById('randomNumber').innerText = `Número Aleatório: ${randomNumber}`;
+            document.getElementById('quote').innerText = `"${randomQuote}"`;
+        }
+    </script>
+</body>
+</html>
